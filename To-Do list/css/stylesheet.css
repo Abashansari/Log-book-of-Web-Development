@@ -1,0 +1,91 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Warm orange-to-pink gradient */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container Styles */
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px 30px;
+    border-radius: 15px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 350px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: #ff7e5f; /* Matches the gradient */
+}
+
+/* Input and Button Styles */
+input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 15px 0;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    font-size: 1em;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+button {
+    padding: 10px 15px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 8px;
+    background-color: #fa8231;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1em;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #e8651d;
+    transform: scale(1.05);
+}
+
+/* Task List Styles */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    background: rgba(255, 255, 255, 0.8);
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+li button {
+    padding: 5px 10px;
+    background: #fa8231;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+li button:hover {
+    background-color: #e8651d;
+    transform: scale(1.05);
+}

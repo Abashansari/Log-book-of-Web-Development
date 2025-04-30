@@ -1,0 +1,160 @@
+:root {
+    --primary: #b0c4de; /* Light Steel Blue for Silver Tone */
+    --secondary: #708090; /* Slate Gray for Depth */
+    --background-dark: #1c1c1c; /* Almost Black Background */
+    --accent-light: #2f4f4f; /* Dark Slate Gray for Contrast */
+    --text-light: #dcdcdc; /* Gainsboro Text for Soft Silver Look */
+    --text-muted: #a9a9a9; /* Dark Gray for Muted Text */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: var(--background-dark); /* Dark Background for Contrast */
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(90deg, var(--secondary), var(--primary)); /* Sleek Gradient Header */
+    color: var(--text-light);
+    padding: 2.5rem 0;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    border-bottom: 5px solid var(--primary); /* Silver Accent Border */
+}
+
+header h2 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+header h3, header h4 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+nav a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background: var(--primary);
+    box-shadow: 0 4px 8px rgba(176, 196, 222, 0.5); /* Light Glow Effect */
+}
+
+#projects {
+    padding: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.box {
+    background: var(--accent-light); /* Dark Slate Gray for Box Background */
+    color: var(--text-light);
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 5px solid var(--primary); /* Vertical Silver Accent Border */
+}
+
+.box:hover {
+    transform: translateY(-5px); /* Interactive Lift Effect */
+    box-shadow: 0px 8px 16px rgba(176, 196, 222, 0.8); /* Stronger Glow */
+}
+
+.box p {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--primary); /* Light Steel Blue for Titles */
+    margin-bottom: 0.5rem;
+}
+
+.box h5 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: var(--text-muted); /* Dark Gray for Muted Emphasis */
+}
+
+.btn {
+    background: var(--primary); /* Light Steel Blue Button */
+    color: var(--text-light);
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: var(--secondary); /* Slate Gray Hover Effect */
+    box-shadow: 0 4px 8px rgba(176, 196, 222, 0.5); /* Subtle Glow */
+}
+
+footer {
+    background: var(--secondary); /* Slate Gray Footer */
+    color: var(--text-light);
+    text-align: center;
+    padding: 3rem 1rem;
+    border-top: 5px solid var(--primary); /* Silver Accent Separator */
+}
+
+footer h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+footer p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.social-icons img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: transform 0.3s, box-shadow 0.3s ease;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.social-icons img:hover {
+    transform: scale(1.1); /* Subtle Zoom Effect */
+    box-shadow: 0px 6px 12px rgba(176, 196, 222, 0.8); /* Silver Glow on Hover */
+}

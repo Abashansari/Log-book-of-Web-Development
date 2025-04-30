@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylish Validation Form</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Validation Form</h2>
+    <form id="validationForm">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name">
+            <div class="error" id="nameError"></div>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email">
+            <div class="error" id="emailError"></div>
+        </div>
+        
+        <div class="form-group">
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone">
+            <div class="error" id="phoneError"></div>
+        </div>
+        
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password">
+            <div class="error" id="passwordError"></div>
+        </div>
+        <div class="form-group">
+            <label for="rewritePassword">Rewrite Password:</label>
+            <input type="password" id="rewritePassword">
+            <div class="error" id="rewritePasswordError"></div>
+        </div>
+        
+
+        <button type="submit" class="submit-btn">Submit</button>
+        <div class="success-message" id="successMessage">Form submitted successfully!</div>
+    </form>
+</div>
+<script>
+    
+    document.getElementById('validationForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        clearErrors();
+        let isValid = validateForm();
+        if (isValid) {
+            showSuccessMessage();
+        }
+    });
+
+    function clearErrors() {
+        document.querySelectorAll('.error').forEach(error => error.innerText = '');
+        document.getElementById('successMessage').style.display = 'none';
+    }
+
+    function validateForm() {
+        let isValid = true;
+        
+        const name = document.getElementById('name').value.trim();
+        if (name.length < 3) {
+            document.getElementById('nameError').innerText = 'Name must be at least 3 characters long.';
+            isValid = false;
+        }
+
+        const email = document.getElementById('email').value.trim();
+        const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        if (!email.match(emailPattern)) {
+            document.getElementById('emailError').innerText = 'Please enter a valid email address.';
+            isValid = false;
+        }
+        const phone = document.getElementById('phone').value.trim();
+    const phonePattern = /^[0-9]{10}$/;
+    if (!phone.match(phonePattern)) {
+        document.getElementById('phoneError').innerText = 'Please enter a valid 10-digit phone number.';
+        isValid = false;
+    }
+
+        const password = document.getElementById('password').value;
+        if (password.length < 6) {
+            document.getElementById('passwordError').innerText = 'Password must be at least 6 characters long.';
+            isValid = false;
+        }
+        const rewritePassword = document.getElementById('rewritePassword').value;
+        if (rewritePassword !== password) {
+    document.getElementById('rewritePasswordError').innerText = 'Passwords do not match.';
+    isValid = false;
+}
+
+        
+        return isValid;
+    }
+
+    function showSuccessMessage() {
+        document.getElementById('successMessage').style.display = 'block';
+        setTimeout(() => alert('Form submitted successfully!'), 100);
+    }
+</script>
+</body>
+</html>

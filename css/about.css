@@ -1,0 +1,16 @@
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .card {
+        width: 90%;
+    }
+    .about {
+        width: 90%;
+        padding: 20px;
+    }
+    .about h3 {
+        display: block;
+        margin: 10px auto;
+    }
+}

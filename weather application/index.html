@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="./css/stylesheet.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Weather App</h1>
+        <form id="weatherForm">
+            <div>
+                <label>
+                    <input type="radio" name="mode" id="nameMode" value="name"> Name Mode
+                </label>
+                            
+            <select id="locationSelect" style="display: none;">
+                <option value="">Select a location</option>
+                <option value="Gantok">Gantok</option>
+                <option value="Namchi">Namchi</option>
+                <option value="Darjeeling">Darjeeling</option>
+                <option value="Kalimpong">Kalimpong</option>
+            </select>
+                <label>
+                    <input type="radio" name="mode" id="coordinateMode" value="coordinate"> Coordinate Mode
+                </label>
+            </div>
+
+            <div id="coordinateInputs" style="display: none;">
+                <input type="text" id="latitudeInput" placeholder="Enter latitude">
+                <input type="text" id="longitudeInput" placeholder="Enter longitude">
+            </div>
+
+            <button type="submit">Get Season</button>
+        </form>
+        <div id="resultContainer">
+            <h2 id="season"></h2>
+            <img id="seasonImage" src="" alt="Season Image" style="display: none;">
+        </div>
+    </div>
+    <script src="./js/season.js"></script>
+</body>
+</html>
